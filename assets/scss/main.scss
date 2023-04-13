@@ -1,0 +1,23 @@
+// ==========================================================================
+// Layout & components
+// ==========================================================================
+@import "root";
+@import "reset";
+@import "fonts";
+@import "base";
+@import "button";
+@import "layout/header";
+@import "layout/footer";
+
+//==========================================================================
+//Foundation
+//==========================================================================
+@import "component/menu-mobile";
+@import "../libs/slick-carousel/slick";
+@import "component/general";
+@import "component/animate";
+@import "component/effect";
+@import "component/slick-slider";
+
+// Page
+// @import "pages/home";

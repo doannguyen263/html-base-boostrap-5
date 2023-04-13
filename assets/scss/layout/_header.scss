@@ -1,0 +1,109 @@
+/*Header*/
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 22px 0;
+	color: #675D57;
+	transition: .3s;
+	z-index: 10;
+	background: #FFFFFF;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 226px;
+
+		a {
+			display: block;
+		}
+
+		img {
+			width: auto;
+			max-height: 30px;
+			transition: .3s;
+		}
+	}
+
+	&__nav {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&--ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+
+			&>li {
+				>a {
+					position: relative;
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 22px;
+					color: var(--primary);
+
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: -30px;
+						left: 0;
+						right: 0;
+						width: 10%;
+						height: 2px;
+						margin: 0 auto;
+						background: var(--primary);
+						opacity: 0;
+						transition: .3s;
+					}
+
+					&:hover,
+					&.active {
+						&::before {
+							width: 100%;
+							opacity: 1;
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	&__right {
+		&--login {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 1.2;
+			color: #001E49;
+		}
+	}
+
+	&__order {
+		padding: 8px 10px;
+	}
+
+	.mburger .icon-bar {
+		background-color: #736963;
+	}
+
+	&.is-sticky {
+		position: fixed;
+		background: #fff;
+		color: #000;
+		box-shadow: 0 0 10px #ccc;
+	}
+	@media (max-width: 1199px) {
+		padding: 16px 0;
+
+		&__nav--ul>li>a::before {
+			bottom: -24px;
+		}
+	}
+}
